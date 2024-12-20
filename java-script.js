@@ -1,9 +1,18 @@
 let gridSize = 16
+let gridContainer = document.querySelector('#grid-container')
 
 function createGrid(){
-    for (x = 0; x < gridSize; x++){
-        for(y = 0; y < gridSize; y++){
-            
+    
+    for (y = 0; y < gridSize; y++){
+        //create row container div inside grid container
+        let rowContainer = document.createElement('div')
+        rowContainer.classList.add('row')
+        gridContainer.appendChild(row)
+        
+        for(x = 0; x < gridSize; x++){
+            // create a single box
+            let box = document.createElement('div')
+            rowContainer.appendChild(box)
         }
     }
 }
