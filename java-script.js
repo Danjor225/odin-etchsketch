@@ -1,5 +1,6 @@
 let gridSize = 16
 let gridContainer = document.querySelector('#grid-container')
+const gridMaxSize = 100
 
 function createGrid(){
     
@@ -22,5 +23,18 @@ createGrid()
 const resetButton = document.querySelector("#reset-button")
 
 resetButton.addEventListener("click", () => {
+    let newGridSize
+    //Prompt user for grid size
+    do{
     
+        newGridSize = parseInt(prompt("Please enter the new size of the grid. Max size = " + gridMaxSize))
+    
+        
+    }while(newGridSize > gridMaxSize)
+    gridSize = newGridSize
+    
+    //Clear Grid
+
+    //Create new Grid
 })
+
