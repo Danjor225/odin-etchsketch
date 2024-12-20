@@ -18,3 +18,9 @@ function createGrid(){
     }
 }
 createGrid()
+
+const resetButton = document.querySelector("#reset-button")
+
+resetButton.addEventListener("click", () => {
+    
+})
