@@ -18,8 +18,8 @@ function createGrid(){
         }
     }
 }
-createGrid()
 
+createGrid()
 const resetButton = document.querySelector("#reset-button")
 
 resetButton.addEventListener("click", () => {
@@ -34,7 +34,10 @@ resetButton.addEventListener("click", () => {
     gridSize = newGridSize
     
     //Clear Grid
-
+    while(gridContainer.firstChild){
+        gridContainer.removeChild(gridContainer.lastChild)
+    }
     //Create new Grid
+    // createGrid()
 })
 
