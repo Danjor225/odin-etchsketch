@@ -7,12 +7,14 @@ function createGrid(){
         //create row container div inside grid container
         let rowContainer = document.createElement('div')
         rowContainer.classList.add('row')
-        gridContainer.appendChild(row)
+        gridContainer.appendChild(rowContainer)
         
         for(x = 0; x < gridSize; x++){
             // create a single box
             let box = document.createElement('div')
+            box.classList.add('cube')
             rowContainer.appendChild(box)
         }
     }
 }
+createGrid()
