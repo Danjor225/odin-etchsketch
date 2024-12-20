@@ -38,6 +38,6 @@ resetButton.addEventListener("click", () => {
         gridContainer.removeChild(gridContainer.lastChild)
     }
     //Create new Grid
-    // createGrid()
+    createGrid()
 })
 
