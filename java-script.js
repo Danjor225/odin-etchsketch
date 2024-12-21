@@ -41,3 +41,7 @@ resetButton.addEventListener("click", () => {
     createGrid()
 })
 
+gridContainer.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = "black";
+})
+
