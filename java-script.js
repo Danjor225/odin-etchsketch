@@ -63,6 +63,8 @@ function generateColor(){
 
 const rainbowButton = document.querySelector('#color-button')
 
-rainbowButton.addEventListener('click', () => {
-    rainbow=true
-})
+rainbowButton.addEventListener('click', function() {rainbow=true})
+
+const blackButton = document.querySelector("#black-button")
+
+blackButton.addEventListener("click", function() {rainbow =false;})
