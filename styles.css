@@ -24,7 +24,7 @@
    flex-grow: 1;
 }
 
-#reset-button{
+#reset-button, #color-button{
    margin-bottom: 10px;
 }
 
