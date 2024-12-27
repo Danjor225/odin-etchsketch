@@ -52,6 +52,12 @@ gridContainer.addEventListener('mouseover', (event) => {
     event.target.style.opacity = darken()
 })
 
+gridContainer.addEventListener('touchmove', (event) => {
+    event.target.style.backgroundColor = generateColor();
+    
+    event.target.style.opacity = darken()
+})
+
 function generateColor(){
     let rgb = ["red", "green", "blue"]
     
