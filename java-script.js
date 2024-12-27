@@ -1,6 +1,7 @@
 let gridSize = 16
 let gridContainer = document.querySelector('#grid-container')
 const gridMaxSize = 100
+let rainbow = true
 
 function createGrid(){
     
@@ -42,6 +43,20 @@ resetButton.addEventListener("click", () => {
 })
 
 gridContainer.addEventListener('mouseover', (event) => {
-    event.target.style.backgroundColor = "black";
+    event.target.style.backgroundColor = generateColor();
 })
 
+function generateColor(){
+    let rgb = ["red", "green", "blue"]
+    
+    if(rainbow){
+        for(x = 0; x < rgb.length; x ++){
+            rgb[x] = Math.random() * 255
+        }
+    } else {
+        rgb = [0,0,0]
+    }
+    
+    return "rgb( " + rgb[0] + ", " + rgb [1] + ", " + rgb[2]
+    
+}
