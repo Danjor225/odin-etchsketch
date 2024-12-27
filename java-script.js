@@ -2,6 +2,7 @@ let gridSize = 16
 let gridContainer = document.querySelector('#grid-container')
 const gridMaxSize = 100
 let rainbow = false
+let darkening = 1
 
 function createGrid(){
     
@@ -40,10 +41,15 @@ resetButton.addEventListener("click", () => {
     }
     //Create new Grid
     createGrid()
+
+    //Reset Darkening
+    darkening =1
 })
 
 gridContainer.addEventListener('mouseover', (event) => {
     event.target.style.backgroundColor = generateColor();
+    
+    event.target.style.opacity = darken()
 })
 
 function generateColor(){
@@ -68,3 +74,19 @@ rainbowButton.addEventListener('click', function() {rainbow=true})
 const blackButton = document.querySelector("#black-button")
 
 blackButton.addEventListener("click", function() {rainbow =false;})
+
+
+
+const darkeningButton = document.querySelector('#darkening-button')
+
+darkeningButton.addEventListener("click", function(){ darkening = 0})
+
+function darken(){
+
+    if(darkening < 1){
+        darkening +=0.1
+        
+    }
+    return darkening
+
+}
