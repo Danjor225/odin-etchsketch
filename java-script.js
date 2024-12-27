@@ -1,7 +1,7 @@
 let gridSize = 16
 let gridContainer = document.querySelector('#grid-container')
 const gridMaxSize = 100
-let rainbow = true
+let rainbow = false
 
 function createGrid(){
     
@@ -60,3 +60,9 @@ function generateColor(){
     return "rgb( " + rgb[0] + ", " + rgb [1] + ", " + rgb[2]
     
 }
+
+const rainbowButton = document.querySelector('#color-button')
+
+rainbowButton.addEventListener('click', () => {
+    rainbow=true
+})
