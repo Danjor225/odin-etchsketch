@@ -24,7 +24,7 @@
    flex-grow: 1;
 }
 
-#reset-button, #color-button{
+.button{
    margin-bottom: 10px;
 }
 
